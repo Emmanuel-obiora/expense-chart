@@ -1,0 +1,27 @@
+.bal{
+    display: flex;
+    border-radius: 10px;
+    background: $Soft-red;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    color: $Cream;
+
+    &-left{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: .5rem;
+
+        & > small{
+            font-size: 11px;
+        }
+
+        & > span{
+            font-size: 25px;
+        }
+    }
+
+    &-right{
+        max-width: 10%;
+    }
+}
