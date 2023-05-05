@@ -22,6 +22,8 @@ body {
   display: grid;
   row-gap: 0.8rem;
   margin: auto;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (max-width: 37.5rem) {
   .main {
