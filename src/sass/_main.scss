@@ -3,4 +3,8 @@
     display: grid;
     row-gap: .8rem;
     margin: auto;
+
+    @media(max-width: 37.5rem){
+        width: 310px;
+    }
 }

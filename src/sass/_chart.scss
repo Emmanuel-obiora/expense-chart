@@ -5,10 +5,16 @@
     padding: 1.5rem;
     row-gap: 1rem;
     border-radius: 10px;
+    width: inherit;
 
-    &-top{
-        font-size: 15px;
+    &-top >h1{
+        font-size: 28px;
         color: $Dark-brown;
+
+        @media(max-width: 37.5rem){
+           font-size: 18px; 
+        }
+
     }
 
     &-but{

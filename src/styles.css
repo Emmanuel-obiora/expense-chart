@@ -23,6 +23,11 @@ body {
   row-gap: 0.8rem;
   margin: auto;
 }
+@media (max-width: 37.5rem) {
+  .main {
+    width: 310px;
+  }
+}
 
 .bal {
   display: flex;
@@ -32,6 +37,7 @@ body {
   justify-content: space-between;
   padding: 1rem 1.5rem;
   color: hsl(27, 66%, 92%);
+  width: inherit;
 }
 .bal-left {
   display: grid;
@@ -55,10 +61,16 @@ body {
   padding: 1.5rem;
   row-gap: 1rem;
   border-radius: 10px;
+  width: inherit;
 }
-.chart-top {
-  font-size: 15px;
+.chart-top > h1 {
+  font-size: 28px;
   color: hsl(25, 47%, 15%);
+}
+@media (max-width: 37.5rem) {
+  .chart-top > h1 {
+    font-size: 18px;
+  }
 }
 .chart-but {
   display: flex;
