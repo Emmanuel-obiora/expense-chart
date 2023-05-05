@@ -16,6 +16,21 @@ const Chart = () => {
         display: false,
         text: 'Expense Chart',
       },
+      tooltip: {
+        // enabled: false,
+        callbacks:
+        {
+          title: (context) =>
+          {
+            // console.log(`$${context[0].parsed.y}`);
+            return (`$${context[0].parsed.y}`);
+          },
+          label: (context) => {
+            // console.log(context.label);
+            return ''
+          },
+        }
+      },
     },
     scales: {
       x: {
@@ -39,32 +54,32 @@ const Chart = () => {
   
   const labels = Data.map((days) => days.day);
   
- const data = {
-    labels,
-    datasets: [
-      {
-        label: '',
-        data: Data.map((info) => info.amount),
-        backgroundColor: [
-                "#ec775f",
-                "#ec775f",
-                "#76b5bc",
-                "#ec775f",
-                "#ec775f",
-                "#ec775f",
-                "#ec775f"
-              ],
-        borderRadius: 3,
-      }
-    ],
-  };
+  const data = {
+      labels,
+      datasets: [
+        {
+          label: '',
+          data: Data.map((info) => info.amount),
+          backgroundColor: [
+                  "#ec775f",
+                  "#ec775f",
+                  "#76b5bc",
+                  "#ec775f",
+                  "#ec775f",
+                  "#ec775f",
+                  "#ec775f"
+                ],
+          borderRadius: 3,
+        }
+      ],
+    };
 
   return (
     <div className='chart'>
       <div className="chart-top">
         <h1>Spending - Last 7 days</h1>
       </div>
-      <Bar data={data} options={options} className="chart-mid" />
+      <Bar data={data} options={options} />
       <div className="chart-but">
         <article className="chart-but_left">
           <p>Total this month</p>
