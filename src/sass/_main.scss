@@ -1,11 +1,11 @@
 .main{
-    width: 500px;
+    max-width: 500px;
     display: grid;
     row-gap: .8rem;
     margin: auto;
     height: fit-content;
 
     @media(max-width: 37.5rem){
-        width: 310px;
+        max-width: 310px;
     }
 }
